@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            height: 50px;
+            width: 500px;
+        } 
+      
+
+        img::before{
+            content: "";
+            position: absolute;
+            display: block;
+            top:-10px;
+            height: 60px;
+            width: 100%;
+            background-color:  rgb(230,230,230);
+            border: 2px dotted rgb(200,200,200);
+            border-radius: 5px;
+        }
+
+        img::after{
+            content: "Broken Image of "attr(alt);
+            display: block;
+            font-size: 16px;
+            font-style: normal;
+            color: rgb(100,100,100);
+            position:absolute;
+            top: 15px;
+            width: 100%;
+            text-align: center;
+        } 
+ 
+
+
+
+    </style>
+</head>
+<body>
+<div style="position: relative;width: 500px;margin-top: 100px;">
+    <!-- <div class='before'></div>  -->
+    <img src="./workspace/bjw-2071/第一阶段/day02/作业/句子练习1.png" alt="测试图片"/>
+    <!-- <div class='after'>Broken Image of 测试图片</div> -->
+</div>
+</body>
+</html>
