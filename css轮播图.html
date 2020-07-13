@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css轮播图</title>
+    <style>
+    *{
+        padding:0;
+        margin:0;
+    }
+
+    .container{
+        width: 450px;
+        height: 300px;
+        margin:0 auto;
+        /* margin-top: 15%; */
+        overflow: hidden;
+    }
+    
+    .pic{
+        width:1800px;
+        animation:move linear 5s infinite forwards;
+    }
+
+    img{
+        width: 450px;
+        height: 300px;
+        float:left;
+    }
+
+    /* @keyframes move {
+        0%, 25% {
+            margin-left: 0;
+        }
+        35%, 60% {
+            margin-left: -450px;
+        }
+        70%, 100% {
+            margin-left: -900px;
+        }
+
+      } */
+
+      /* @keyframes move {
+        0%{
+            margin-left: 0;
+        }
+        35%{
+            margin-left: -450px;
+        }
+        70%{
+            margin-left: -900px;
+        }
+        100%{
+            margin-left: -1350px;
+        }
+        
+      } */
+
+      @keyframes move {
+        0%, 15% {
+            margin-left: 0;
+        }
+        25%, 45% {
+            margin-left: -450px;
+        }
+        55%, 75% {
+            margin-left: -900px;
+        }
+        85%, 100% {
+            margin-left: -1350px;
+        }
+      }
+
+      </style>
+</head>
+<body>
+    <div class="container">
+        <div class="pic">
+            <img src="图片/夏目1.jpg" />
+            <img src="图片/起风了2.jpg" />
+            <img src="图片/千与千寻3.jpg" />
+            <img src="图片/黑羽快斗4.jpg" />
+        </div>
+    </div>
+    
+</body>
+</html>
