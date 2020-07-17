@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>github</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        /*页面全局属性*/
+        .body{
+            text-decoration: none;
+            background-color: #fff;
+        }
+        /*头部*/
+        .header{
+            height: 53px;
+            background-color: #24292E;
+            /* border: 1px solid #24292E; */
+            box-sizing: border-box;
+        }
+        /*头部左边的猫*/
+        .header-img-one{
+            float: left;
+            position: relative;
+            top: 50%;
+            margin-top: -16px;
+            padding-left: 16px;
+        }
+        /*头部搜索框和图标*/
+        .header-two{
+            float: left;
+            height: 53px;
+            padding-left: 16px;
+            
+        }
+        /*搜索框的输入框*/
+        .header-two-input{
+            float: left;
+            width: 273px;
+            height: 28px;
+            margin-top: 10px;
+            padding-left: 16px;
+            border-radius: 6px;
+            background-color: #fff;
+            font-size: 12px;
+            /* border: 1px solid black; */
+        }
+        
+        /*搜索框的图标*/
+        .header-two-img{
+            float: left;
+            position: relative;
+            top: 50%;
+            margin-top: -9px;
+            left: -32px;
+        }
+        /*头部导航栏*/
+        .header-nav{
+            
+            margin-right: 16px;
+            float: left;
+            margin-top: 15px;
+            
+        }
+        /*导航栏里可点击的单词*/
+        .header-link{
+            font-weight: 600;
+            font-size: 14px;
+            color: #fff;
+            padding-right: 16px;
+
+        }
+        /*主体部分双飞翼布局*/
+        .center{
+            height: 780px;
+            float: left;
+            width: 100%;
+            background-color: antiquewhite;
+        }
+        .center-inbox{
+            margin: 0 auto;
+            padding-top: 16px;
+            padding-bottom: 16px;
+            height: 140px;
+            border: 1px solid gray;
+            margin: 0 230px 0 260px;
+
+        }
+        
+        .left{
+            float: left;
+            width: 360px;
+            height: 757px;
+            margin-left: -100%; 
+            background-color: gray;
+        }
+
+        .right{
+            float: left;
+            width: 340px;
+            height: 757px;
+            margin-left: -340px;  
+            background-color:gray;
+        }
+
+        /*左边栏*/
+        .left-top{
+            width: 320px;
+            height: 30px;
+        }
+        /*左上角的单词*/
+        .left-top-character{
+            display: inline-block;
+            font-size: 14px;
+            margin-top: 5px;
+            padding-top: 30px;
+            margin-right: 30px;
+            margin-left: 30px;
+        }
+        /*左上角的New按钮*/
+        .left-top-btn{
+            height: 30px;
+            width: 70px;
+            background-color: #2EA44F;
+            display: inline-block;
+            float: left;
+           
+            border-radius: 8px;
+            padding-top: 30px;
+            position: relative;
+            top: 15px;
+
+            
+        }
+        /*按钮里的字*/
+        .left-top-btn-character{
+            color: white;
+        }
+        /*左边输入框*/
+        .left-input{
+            height: 30px;
+            width: 230px;
+            margin-top: 7px;
+            border-radius: 8px;
+            color: grey;
+            padding-left: 13px;
+            padding-top: 5px;
+            border: 1px solid #e1e4e8;
+        }
+        /*左边中间部分*/
+        .left-center{
+            width: 255px;
+            height: 30px;
+            border-bottom: 1px solid #e1e4e8;
+            padding-bottom: 20px;
+            padding-top: 30px;
+            margin-top: 15px;
+        }
+        /*左边中间部分字*/
+        .left-center-character{
+            color: #0366D6;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+
+
+       /*右边栏*/
+        .right-top{
+            margin-top: 34px;
+            margin-left: 30px;
+            border-bottom:1px solid #e1e4e8;
+            padding-bottom: 17px;
+        }
+        /*右边顶部字*/
+        .right-top-character{
+            color: #586069;
+            font-size: 14px;
+        }
+        /*右边其余字*/
+        .right-center-character{
+            color: #586069;
+            font-size: 10px;
+        }
+        
+
+
+        /*中间部分*/
+        .center-top{
+            height: 757px;
+            border: 1px solid white;
+            padding: 0 20px;
+            box-sizing: border-box;
+            background-color: white;
+        }
+
+        /*中间栏最上面标题*/
+        .center-top-character{
+            line-height: 1.5;
+            text-align: center;
+            margin: 0;
+            font-size: 24px;
+            font-weight: 400;
+        }
+        /*中间栏标题下面的字*/
+        .center-center-character{
+            line-height: 1.5;
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 30px;
+            font-size: 18px;
+            color: #586069;
+        }
+        /*中间栏标题形式*/
+        h2 {
+            font-weight: 600;
+        }
+
+        /*中间栏标题下面的字的形式*/
+        p{
+            display: block;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+        }
+        /*中间栏按钮*/
+        .center-btn{
+            height: 40px;
+            width: 212px;
+            margin-bottom: 16px;
+            padding: 10px 50px;
+            font-size: 16px;
+            margin-right: 8px;
+            margin-left: 8px;
+            font-weight: 500;
+            line-height: 20px;
+            border: 1px solid;
+            border-radius: 6px;
+            display:inline-block
+
+
+        }
+        /*中间栏按钮中的字体颜色*/
+        .center-btn-character{
+            color: white;
+        }
+        
+       
+       
+
+    </style>
+</head>
+<body>
+    <!--头部-->
+    <div class="header">
+        <a class="header-img-one">
+            <img src="cat.png" alt="cat">
+        </a>
+        <!--搜索框和图标-->
+        <div class="header-two">
+            <input class="header-two-input" type="text" placeholder="Search or jump to ..."></input>
+            <div class="header-two-img">
+                <img src="https://github.githubassets.com/images/search-key-slash.svg" alt="图标">
+            </div>
+        </div>
+        <!--导航栏-->
+        <nav class="header-link">
+            <a class="header-nav">Pull requests</a>
+            <a class="header-nav">Issues</a>
+            <a class="header-nav">Marketplace</a>
+            <a class="header-nav">Explore</a>
+        </nav>
+    </div>
+
+
+    <!--主体部分-->
+        <div class="center">
+            <div class="center_inbox">
+                <div class="center-top">
+                    <a class="center-top-character">
+                        <h2>Learn Git and GitHub without</h2>
+                        <h2>any code!</h2>
+                    <a class="center-center-character">
+                <p>Using the Hello World guide, you’ll create a</p> 
+                <p>repository, start a branch, write comments, and </p>
+                <p>open a pull request.</p>
+            </a>
+        </a>
+        <button class="center-btn">
+            <a class="center-btn-character"href="#">Read the guide</a>
+            <a class="center-btn-character"href="#">Start a project</a>
+        </button>
+                </div>
+            </div>     
+        </div>
+        </div> 
+
+    <!--左边栏-->
+    <div class="left">
+        <div class="left-top">
+            <div class="left-top-character">
+                Respositories</a>
+            <button class="left-top-button">
+                <img fill-rule="evenodd" d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z" alt="图标">
+            <a class="left-top-btn-character"href="#">New</a>
+            </button>
+        </div>
+        <div class="left-input">
+            <input type="text"placeholder="Find a repository...">
+        </div>
+        <div class="left-center">
+            <img src="" alt="图标">
+            <a class="left-center-character">chenzhangjie/banyuan-class</a>
+        </div>
+        </div>
+    </div>
+    <!--右边栏-->
+    <div class="right">
+        <div class="right-top">
+            <a class="right-top-character">Explore repositories</a>
+            <div class="right-center-character">
+                i18next/18next-xhr-backend</br>
+                [deprecated] can be replaced with i18next-http-backend</br>
+            </br>
+            </div>
+            <div class="right-center-character">
+                i18next/ng-18next</br>
+                translation for AugularJS using i18next</br>
+            </br>
+            </div>
+            <div class="right-center-character">
+                wechatwechat-miniprogram/kbone-ui</br>
+                kbone-ui 是一套能同时支持 小程序(kbone)和vue框架的多端UI库</br>
+            </br>
+            </div>  
+        </div> 
+    </div>
+</body>
+</html>
