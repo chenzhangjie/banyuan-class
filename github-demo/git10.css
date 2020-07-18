@@ -1,0 +1,405 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.body{
+    text-decoration: none;
+    background-color: #fff;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+}
+.header{
+    height: 53px;
+    width: 100%;
+    background-color: #24292E;
+    /* border: 1px solid #24292E; */
+    box-sizing: border-box;
+    display: inline-block;
+    position: relative;
+}
+.header-img-one{
+    float: left;
+    position: relative;
+    top: 50%;
+    margin-top: -16px;
+    padding-left: 16px;
+}
+.header-two{
+    width: 300px;
+    height: 28px;
+    /* margin-right: 16px; */
+    margin-left: 10px;
+    float:left;
+    position: relative;
+    top:50%;
+    
+}
+.header-two-input{
+    width: 280px;
+    height: 28px;
+    background-color: #3F4448;
+    color: rgb(197, 192, 192);
+    border-radius: 5px;
+    border: none;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.header-two-img{
+    top:50%;
+    transform:translateY(-50%);
+    margin-left: -25px;
+}
+/*头部导航栏*/
+.header-link{
+    
+    float:left;
+    position: absolute;
+    color: white;
+    top:50%;
+    transform:translateY(-50%);
+    
+}
+.header-link>a{
+    float: left;
+    margin: 0 16px 0 0;
+    text-decoration: none;
+    font-size: 14px;
+    color:white;
+    font-weight: 600;
+
+}
+/*头部右边部分*/
+.header-right{
+    float: right;
+    height: 53px;
+    width: 107.62px;
+    /* width: 100px; */
+}
+/*头部右边部分图片*/
+.header-right-img{
+    float: left;
+    height: 20px;
+    width: 20px;
+    padding-right:16px ;
+    transform: translateY(80%);
+}
+
+
+
+
+
+
+
+
+/*主体部分双飞翼布局*/
+/*中间部分*/
+.center{
+    height: 780px;
+    float: left;
+    width: 100%;
+    background-color: white;
+}
+.center-inbox{
+   
+    box-sizing: border-box;
+    /* padding-top: 16px;
+    padding-bottom: 16px; */
+    height: 780px;
+    /* border: 1px solid gray; */
+    margin: 0 340px 0 320px;
+
+}
+/*中间部分总属性*/
+.center-body{
+    width: 100%;
+    height: 764px;
+    margin: 0 auto;
+}
+/*中间上方右背景的一整块*/
+.center-top{
+    height: 381px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    margin-top: 16px;
+    border: 1px solid rgb(209, 213, 218);
+    border-radius: 5px;
+    text-align: center;
+    background-image: linear-gradient(180deg, hsla(0, 0%, 100%, 0) 60%, #fff), linear-gradient(70deg, #dbedff 32%, #ebfff0);
+    padding:20px 0;
+
+}
+/*中间上方一整块包括标题和内容*/
+.center-top-block{
+    box-sizing: border-box;
+    /* width: 478px; */
+    height: 391px;
+    padding: 20px;
+    margin: 0 auto;
+
+} 
+/*中间上方一整块标题*/
+.center-top-block-title{
+    /* width: 374px; */
+    height: 90px;
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+}
+/*中间上方一整块内容*/
+.center-top-block-content{
+    /* width: 374px; */
+    height: 81px;
+    margin-top: 10px;
+    text-align: center;
+    color: #24292e;
+} 
+/*中间部分的绿色按钮*/
+.center-top-btn-read{
+    box-sizing: border-box;
+    width: 212px;
+    height: 40px;
+    background-color: #2c974b;
+    border:1px solid rgba(27,31,35,.15);
+    padding: 10px 50px;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 500;
+    line-height: 20px;
+    border-radius: 6px;
+    margin:0 8px 16px 6px;
+
+} 
+/*中间部分的白色按钮*/
+.center-top-btn-start{
+    box-sizing: border-box;
+    width: 212px;
+    height: 40px;
+    background-color: #fafbfc;
+    border:1px solid rgba(27,31,35,.15);
+    padding: 10px 50px;
+    font-size: 16px;
+    color: #24292e;
+    font-weight: 500;
+    line-height: 20px;
+    border-radius: 6px;
+    margin:0 8px 16px 6px;
+    
+}
+/*中间底部小贴士*/
+.center-footer-tip{
+    max-width: 1400px;
+    margin: 0 auto;
+    height: 52px;
+    margin-top: 24px;
+    color: rgb(88, 96, 105);
+    font-size: 12px;
+    line-height: 18px;
+}
+.center-footer{
+    width: 100%;
+    max-width: 1400px;
+    margin: 32px auto;
+    height: 128px;
+    color: rgb(36, 41, 46);
+    font-size: 14px;
+    line-height: 21px;
+}
+.center-footer-img{
+    width: 120px;
+    height: 128px;
+    margin-right: 16px;
+    float: left;
+}
+.footer-list-1{
+    width: 110px;
+    height: 128px;
+    float: left;
+    padding-left: 8px;
+    
+} 
+.mb-1{
+    list-style: none;
+    font-size: 12px;
+    color: rgb(88, 96, 105);
+}
+
+
+/*左边栏*/
+.left{
+    float: left;
+    width: 272px;
+    height: 780px;
+    margin-left: -100%; 
+    background-color: #fff;
+    padding: 0 24px;
+   
+}
+/*左边栏上部*/
+.left-top{
+    width: 241px;
+    height: 130px;
+    margin-top: 32px;
+}
+.left-repositories{
+    width: 248px;
+    height: 28px;
+    margin-bottom:4px;
+    font-size: 14px;
+    font-weight: 600px;
+    line-height: 28px;
+}
+.left-btn-new{
+    border: 1px solid #2ea44f;
+    border-radius: 5px;
+    position: relative;
+    float: right;
+    padding: 3px 12px;
+    width: 71px;
+    height: 28px;
+    background-color:#2ea44f;
+    color: white;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 600;
+}
+.left-input{
+    box-sizing: border-box;
+    width: 248px;
+    height: 32px;
+    border: 1px solid rgba(194, 197, 199);
+    margin: 4px 0 16px 0;
+    padding: 5px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    line-height: 1.5;
+    background-color: #fff;
+}
+/*左边导航栏*/
+.left-nav{
+    list-style: none;
+    float: left;
+    color: #0366d6;
+    font-size: 14px;
+    text-decoration: none;
+    width: 188px;
+    height: 21px;
+    box-sizing: border-box;
+    margin: 0 0 8px 0;
+}
+/*左边栏中间位置Working with a team?*/
+.left-center{
+    width: 241px;
+    height: 164px;
+} 
+
+.left-center-title{
+    width: 241px;
+    height: 38px;
+    box-sizing: border-box;
+    border-top: 1px solid #e1e4e8;
+    font-size: 14px;
+    color: black;
+    font-weight: 600px;
+    padding: 16px 0 0 0;
+    margin: 0 0 4px 0;
+} 
+.left-center-content{
+    width: 241px;
+    height: 84px;
+    box-sizing: border-box;
+    margin: 0 0 10px 0;
+    font-size: 14px;
+    color: #24292e;
+}
+/*create按钮*/
+.left-btn-create{
+    box-sizing: border-box;
+    width: 157px;
+    height: 28px;
+    margin: 0 8px 0 0;
+}
+.left-btn-create-content{
+    font-weight: 500;
+    line-height: 20px;
+    background-color:#fafbfc;
+    color: #0366d6;
+    border-color: rgba(194, 197, 199);
+    border-radius: 5px;
+    border: 1px solid #D1D2D3;
+    margin: 6px ;
+    padding: 3px 12px;
+    font-size: 12px;
+}
+/*右边栏*/
+.right{
+    float: left;
+    width: 340px;
+    height: 780px;
+    margin-left: -340px;  
+    background-color:#fff;
+    /* padding-left: 40px; */
+    position: relative;
+    left: 40px;
+}
+/*右边栏最上面*/
+.right-top-explore{
+    border:none;
+    /* border-bottom: 1px solid  #D1D2D3; */
+    width: 240px;
+    height: 110px;
+    margin: 32px 0 0 0;
+    padding:0 16px 0 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #000000;;
+}
+/*右边栏最上面标题内容*/
+.right-top-explore-content{
+    box-sizing: border-box;
+    width: 240px;
+    height: 80px;
+    padding: 5px 0;
+    margin: 8px 0;
+    
+}
+/*右边栏最上面第二标题*/
+/* .right-second-title{
+    box-sizing: border-box;
+    margin-top: 20px;
+    width: 88px;
+    height: 18px;
+    font-weight: 600;
+    font-size: 12px;
+    color: #24292e;
+    
+} */
+/*右边栏最上面第二标题内容*/
+.right-second-title-content{
+    box-sizing: border-box;
+    width: 240px;
+    height: 18px;
+    padding:0;
+    margin: 0px 0 15px 0;
+    font-size: 12px;
+    color: #586069;
+    border-bottom: 1px solid  #D1D2D3;
+   
+}
+/*尾行图标*/
+.right-circle{
+    top: 1px;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: yellow;
+    
+    
+}
+.right-btn-more{
+    width: 240px;
+    height: 18px;
+    margin-bottom: 16px;
+    font-size: 12px;
+    color: #586069;
+} 
