@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+</body>
+<script>
+    //第一题
+    var r = 20;
+    console.log(2*3.14*r);
+    //第二题
+    var h = 201;
+    var n = 201 % 24;
+    console.log("经过了"+(201-n)/24+"天"+n+"小时");
+    //第三题
+    var a = 10.21;
+    var b = 20.12;
+    var c = (a*100 + b*100)/100;
+    console.log(c);
+    //第四题
+    var x = Math.random().toFixed(2);
+    var y = Math.random().toFixed(2);
+    console.log(x);
+    console.log(y);
+    var max = Math.max(x,y);
+    console.log(max);
+    //第五题
+    var year = (Math.random()*(2100-1000)+1000).toFixed(0);
+    console.log(year);
+    var c = (year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0);
+    console.log(c);
+    //第六题
+    var cssname = 'box';
+    var num = 1;
+    var html ='<div class=\"'   +cssname+   '\">这里是box'+num+'</div>';
+    console.log(html);
+
+
+</script>
+</html>
