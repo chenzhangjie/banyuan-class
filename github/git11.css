@@ -1,0 +1,465 @@
+*{
+    margin: 0;
+    padding:0;
+    text-decoration:none;/*去掉下划线*/
+    line-height: 1.5;
+}
+body{
+    min-width: 1075px;
+}
+/*------------------头部--------------------*/
+
+/*头部中所有div的属性*/
+.header-div{
+    width: 100%;
+    height: 53px;
+    background-color: #24292f;
+    position: relative;
+}
+/* 头部最左边的猫*/
+.header-img-one{
+    float: left;
+    position: relative;
+    top:50%;
+    transform:translateY(-50%);
+}
+/*头部的input标签所在的div*/
+.header-search{
+    width: 300px;
+    height: 28px;
+    float:left;
+    position: relative;
+    top:50%;
+}
+/*头部的input标签*/
+.header-input{
+    width: 280px;
+    height: 28px;
+    background-color: #3F4448;
+    color: rgb(197, 192, 192);
+    border-radius: 5px;
+    border: none;
+    top: 50%;
+    transform: translateY(-50%);
+}
+/*头部搜索框后面的图标*/
+.header-search-img{
+    top:50%;
+    transform:translateY(-50%);
+    margin-left: -25px;
+}
+/*头部div中所有a标签所在的div*/
+.header-link{
+    float:left;
+    position: absolute;
+    color: white;
+    top:50%;
+    transform:translateY(-50%);
+}
+/*头部div中的所有的a标签属性*/
+.header-link>a{
+    float: left;
+    margin: 0 16px 0 0;
+    text-decoration: none;
+    font-size: 14px;
+    color:white;
+    font-weight: 600;
+}
+
+/*----头部右上角----*/
+.header-right{
+    width: 107.62px;
+    height: 53px;
+    float: right;
+    /* top: 50%; */
+    /* transform: translateY(50%); */
+}
+/*头部右上角的铃铛*/
+.header-bell-img{
+    width: 20px;
+    height: 20px;
+    padding-right:16px ;
+    float: left;
+    /* top: 50%; */
+    transform: translateY(80%);
+}
+/*头部右上角的加号*/
+.header-plus-img{
+    width: 20px;
+    height: 20px;
+    padding-right:16px ;
+    float: left;
+    /* top: 50%; */
+    transform: translateY(80%);
+}
+
+
+
+/*----------------------中间部分----------------------*/
+/*整体框架为双飞翼布局*/
+.center {
+    height: 790px;
+    float: left;
+    width: 100%;
+    background-color:white;
+}
+.center_inbox{
+    box-sizing: border-box;
+    border: 1px solid white;
+    height: 790px;
+    margin: 0 400px 0 300px;
+}
+/*中间的主体结构*/
+.center-body{
+    width: 100%;
+    height: 780px;
+    margin: 0 auto;
+    max-width: 1400px;
+}
+/*带背景颜色的中间上方板块*/
+.center-top{
+    box-sizing: border-box;
+    height: 382px;
+    margin: 0 auto;
+    margin-top: 16px;
+    padding:20px 0;
+    border: 1px solid rgb(209, 213, 218);
+    border-radius: 5px;
+    background-image: linear-gradient(180deg, hsla(0, 0%, 100%, 0) 60%, #fff), linear-gradient(70deg, #dbedff 32%, #ebfff0);
+    font-size: 14px;
+    text-align: center;
+}
+/*包含中间上方标题和内容的板块*/
+.center-top-block{
+    box-sizing: border-box;
+    /* width: 478px; */
+    height: 391px;
+    padding: 32px;
+    margin: 0 auto;
+    
+}
+.center-top-block-title{
+    /* width: 374px; */
+    height: 90px;
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+}
+.center-top-block-content{
+    /* width: 374px; */
+    height: 81px;
+    margin-top: 10px;
+    text-align: center;
+    color: #24292e;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;;
+}
+/*按钮read-the-guide*/
+.center-btn-read{
+    box-sizing: border-box;
+    width: 170px;
+    height: 42px;
+    background-color: #2ea44f;
+    border:1px solid white;
+    padding: 10px 30px;
+    font-size: 14px;
+    color: white;
+    font-weight: 500;
+    line-height: 20px;
+    border-radius: 6px;
+    margin:0 8px 16px 6px;
+}
+/*按钮start-a-project*/
+.center-btn-start{
+    box-sizing: border-box;
+    width: 170px;
+    height: 42px;
+    background-color:#fff;
+    border:1px solid rgba(194, 197, 199);
+    padding: 10px 30px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    border-radius: 6px;
+    margin:0 8px 16px 6px;
+}
+
+/*-----中间底部------*/
+/*中间底部小贴士的位置*/
+.center-tip{
+    max-width: 1400px;
+    margin: 0 auto;
+    height: 52px;
+    margin-top: 24px;
+    color: rgb(88, 96, 105);
+    font-size: 12px;
+    line-height: 18px;
+}
+/*中间底部*/
+.footer{
+    width: 100%;
+    max-width: 1400px;
+    margin: 32px auto;
+    height: 128px;
+    color: rgb(36, 41, 46);
+    font-size: 14px;
+    line-height: 21px;
+}
+/*中间底部猫图标*/
+.center-footer-img{
+    width: 120px;
+    height: 128px;
+    margin-right: 16px;
+    float: left;
+}
+/*中间底部3列可点击链接*/
+.footer-list{
+    width: 110px;
+    height: 128px;
+    float: left;
+    padding-left: 8px;
+    
+}
+/*中间底部3列可点击链接的字体设置*/
+.mb-1{
+    list-style: none;
+    font-size: 12px;
+    color: rgb(88, 96, 105);
+}
+
+
+/*-------------------左边栏-------------------*/
+.left {
+    float: left;
+    position: relative;
+    width: 300px;
+    height: 790px;
+    margin-left: -100%;
+    padding: 0 24px;
+    font-weight: 600;
+}
+/*左侧上方板块*/
+.left-top{
+    border-bottom: 1px solid #e1e4e8;
+    width: 241px;
+    height: 130px;
+    margin: 32px 0 0 0;
+}
+/*repositories标签*/
+.repositories{
+    width: 248px;
+    height: 28px;
+    margin: 0 0 4px 0;
+    font-size: 14px;
+    font-weight: 600px;
+    line-height: 28px;
+}
+/*new按钮*/
+.left-btn-new{
+    border: 1px solid #2ea44f;
+    border-radius: 5px;
+    position: relative;
+    float: right;
+    padding: 3px 12px;
+    width: 71px;
+    height: 28px;
+    background-color:#2ea44f;
+    color: white;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 600;
+}
+/*左侧find输入框*/
+.left-find-input{
+    box-sizing: border-box;
+    width: 248px;
+    height: 32px;
+    border: 1px solid rgba(194, 197, 199);
+    margin: 4px 0 16px 0;
+    padding: 5px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    line-height: 1.5;
+    background-color: #fff;
+}
+/*左侧点击栏chenzhangjie/banyuan-class*/
+.left-menu{
+    list-style: none;
+    float: left;
+    color: #0366d6 !important;
+    font-size: 14px;
+    text-decoration: none;
+    width: 188px;
+    height: 21px;
+    box-sizing: border-box;
+    margin: 0 0 8px 0;
+}
+/*左边栏中间文字部分*/
+.left-center{
+    width: 241px;
+    height: 164px;
+}
+.left-center-title{
+    width: 241px;
+    height: 38px;
+    box-sizing: border-box;
+    border-top: 1px solid #e1e4e8;
+    font-size: 14px;
+    color: black;
+    font-weight: 600px;
+    padding: 16px 0 0 0;
+    margin: 0 0 4px 0;
+}
+.left-center-content{
+    width: 241px;
+    height: 84px;
+    box-sizing: border-box;
+    margin: 0 0 10px 0;
+    font-size: 14px;
+    color: #24292e;
+}
+/*左侧下方create按钮*/
+.create{
+    box-sizing: border-box;
+    width: 157px;
+    height: 28px;
+    margin: 30px 8px 0 0;
+}
+.left-btn-create{
+    font-weight: 500;
+    line-height: 20px;
+    background-color:#fafbfc;
+    color: #0366d6;
+    border-color: rgba(194, 197, 199);
+    border-radius: 5px;
+    border: 1px solid #D1D2D3;
+    margin: 6px ;
+    padding: 3px 12px;
+    font-size: 12px;
+}
+/*---------------------右边栏--------------------*/
+.right {
+    float: left;
+    width: 350px;
+    height: 790px;
+    margin-left: -350px;  
+}
+
+.right-explore{
+    border:none;
+    /* border-bottom: 1px solid  #D1D2D3; */
+    width: 240px;
+    height: 54px;
+    margin: 32px 0 0 0;
+    padding:0 16px 0 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #000000;;
+}
+
+/*右侧圆形标志*/
+.right-circle{
+    top: 1px;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #2b7489
+}
+
+/*右边第一行*/
+.right-first{
+    box-sizing: border-box;
+    width: 240px;
+    height: 135px;
+    padding: 8px 0;
+    margin: 8px 0;
+    border-bottom: 1px solid #D1D2D3;
+}
+.right-first-title{
+    box-sizing: border-box;
+    font-size: 12px;
+    font-weight: 600px;
+    color: #24292e;
+    line-height: 1.5;
+    width: 168px;
+    height: 18px;
+}
+.right-first-content{
+    box-sizing: border-box;
+    margin-bottom: 8px;
+    width: 240px;
+    height: 70px;
+    font-size: 12px;
+    color: #586069;
+}
+
+.right-second{
+    box-sizing: border-box;
+    width: 240px;
+    height: 102px;
+    margin: 8px 0;
+    padding: 8px 0;
+    border-bottom: 1px solid #D1D2D3;
+}
+.right-second-title{
+    box-sizing: border-box;
+    width: 180px;
+    height: 18px;
+    color: black;
+    font-weight: 600px;
+    font-size: 12px;
+}
+.right-second-content{
+    width: 240px;
+    height: 36px;
+    font-size: 12px;
+    margin-bottom: 8px;
+    color: #586069;
+}
+
+.right-third{
+    box-sizing: border-box;
+    width: 240px;
+    height: 102px;
+    margin: 8px 0;
+    padding: 8px 0;
+   
+}
+.right-third-title{
+    box-sizing: border-box;
+    width: 180px;
+    height: 18px;
+    color: black;
+    font-weight: 600px;
+    font-size: 12px;
+}
+.right-third-content{
+    width: 240px;
+    height: 36px;
+    font-size: 12px;
+    margin-bottom: 8px;
+    color: #586069;
+}
+/*右侧最下面导航标签*/
+.more{
+    width: 240px;
+    height: 18px;
+    margin-bottom: 16px;
+    font-size: 12px;
+    color: #586069;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
