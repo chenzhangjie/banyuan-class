@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <div class="leftContent">
+        <pre id="contain"></pre>
+    </div>
+    <div class="rightContent">
+        <pre id="resume"></pre>
+    </div> -->
+    
+    <pre class="content"></pre>
+    
+
+
+
+<script>
+    var contentEle = document.getElementsByClassName('content')[0];
+    var string = "we are banyuan";
+    var count = 0;
+    var timer;
+
+    console.log(string.substring(0,1));
+
+    function addContent(){
+        //无限
+        if(count > string.length){
+            count = 0;
+        }
+        count ++;
+        contentEle.innerHTML = string.substring(0,count);
+    }
+    function start(){
+        timer = setInterval(addContent,80);
+    }
+    function stop(){
+        if(timer){
+            clearInterval(timer);
+        }
+    }
+    start();
+
+</script>
+</body>

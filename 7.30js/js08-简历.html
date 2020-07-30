@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body style="padding: 25px;">
+    <div class="leftContent">
+        <pre id="content"></pre>
+        <!--pre标签，输入什么内容就输出什么内容，下面的数组里的内容不用对齐-->
+    </div>
+    <div class="rightContent">
+        <pre id="resume"></pre>
+    </div>
+</body>
+<!--本质上是一个标签 js控制style,然后在反馈到页面上-->
+<style id = "styleTag">
+
+</style>
+<link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css'></link>
+    <script src="marked.js"></script>
+    <script>
+        //间隔时间
+        const interval = 8;
+        //左侧字数
+        var leftCount = 0;
+        //右侧字数
+        var rightCount = 0;
+
+        //简历内容,右侧，放在一个数组里
+        const resumeContent = [`
+  ## MyResume
+  
+  ### name : *Ban Yuan*
+  ### slogen : *一次相遇终身相伴*
+  ### Email : *contact@banyuan.club*
+  ### website : www.banyuan.club`
+      ];
+  
+      //叙述内容,左侧，放在数组里
+      const styleContent = [
+  `/* Hello, My name is Ban Yuan,
+  * This is how I write my resume.
+  * I hope you like it~
+  * ===================================================
+  */`,`/* This interface is not like development interface.
+  /* So , let me beautify the interface ^_^
+  */`,`
+  *{
+    transition: all .3s;
+  }
+  html {
+    color: #06EB00; background: #030303;
+  }
+  .leftContent {
+    padding: 5px;
+    border: 1px solid;
+    overflow: auto;
+    width: 45vw; 
+    height: 90vh;
+    float:left;
+  }
+  /* It looks like a  command-line tool now , right ?
+  /* Let me finish my resume~
+  * ====================================================
+  * First of all , I need a paper.
+  */
+  .rightContent {
+    float:left;
+    padding: 5px;  
+    width: 45vw; 
+    height: 90vh; 
+    border: 1px solid;
+    background: white; 
+    color: #222;
+    overflow: auto;
+    margin-left:2vw;
+  }
+  /* Now, I got a white paper. 
+  * Let me start~~
+  */`,`/*As you see, it wirte by markdown grammar.
+  /*Let me translated into HTML by using marked package.*/
+  /*Let us start~*/
+  /*....1....*/
+  /*....2....*/
+  /*....3....*/
+  /*.action!.*/`,`
+  /*Emmmmmmmmmmmmmmmm......*/
+  /*It is not pretty right?*/
+  /*So I use css to beautify my resume. I use github-markdown-css.*/
+  /*Let us start~*/
+  /*....1....*/
+  /*....2....*/
+  /*....3....*/
+  /*...go!...*/`,
+  `/*And here we are.*/?`
+      ];
+    //style构建字符串,join()把数组中的所有元素放入一个字符串,输出的是styleContent里的所有内容
+    var styleStr = styleContent.join('');
+
+    //动态style部分
+    var styleTag = document.getElementById('styleTag');
+
+    //左侧内容部分，通过id拿元素就不需要在后面加[0]
+    var content = document.getElementById('content');
+
+    //右侧简历部分
+    var resume = document.getElementById('resume');
+
+    var leftContentEle = document.getElementsByClassName('leftContent')[0];
+    //定时器全局变量
+    var intervalController;
+
+
+
+    //向左侧与style添加内容
+    function addContentToleft(){
+
+        //左边增加内容
+        content.innerHTML = styleStr.substring(0,leftCount);
+
+        //style更新, 通过解析style的方式，动态增加上元素的css
+        styleTag.innerHTML = styleStr.substring(0,leftCount);
+
+        scrollToButtom(leftContentEle);
+        
+    }
+    
+
+    //显示部分
+    function showContent(){
+            // 显示简历之前
+            if(leftCount<styleContent.slice(0,3).join('').length){//左侧字数小于数组里前三段字数总和
+
+                leftCount++;
+
+                addContentToleft();
+
+            }else{
+                //开始显示简历
+                rightCount++;
+                 
+                resume.innerHTML=resumeContent[0].substring(0,rightCount);
+                
+                //简历显示完成，继续显示左边内容
+                if(rightCount > resumeContent[0].length){
+
+                    leftCount ++;
+                    //继续向左边增加内容
+                    addContentToleft();
+                    //解析markdown语法
+                    if(leftCount >= styleContent.slice(0,4).join('').length){
+                        //marked
+                        resume.innerHTML = marked(resumeContent[0].substring(0,rightCount));
+                    }
+                }
+                //添加class,增加样式
+                if(leftCount > styleContent.slice(0,5).join('').length){
+                    resume.className = 'markdown-body';
+                }
+            }
+            //结束，清除定时器
+            if(leftCount > styleStr.length){
+                window.clearInterval(intervalController)
+            }
+        }
+        function start(){
+            //定时调用，增加字数
+            intervalController = setInterval(showContent,interval)
+        }
+        //滑动到最底部
+        function scrollToButtom(ele){
+            if(ele){
+                ele.scrollTop = ele.scrollHeight;
+            }
+        }
+        start();
+    </script>
+</html>
