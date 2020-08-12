@@ -1,0 +1,84 @@
+{% extends 'layout.njk' %}
+{% block content %}
+    <div>
+        <span>用户名</span>
+        <input class='username'/>
+    </div><div>
+        <span>密码</span>
+        <input class='password' type = 'password'/>
+    </div>
+    <div>
+        <button class='login-btn'>登录</button>
+    </div>
+
+    <input class="input1"/>
+    <input class="input2"/>
+
+{% endblock %}
+{% block script %}
+    <script src='/js/jquery.js'></script>
+    <script src='/js/jquery.cookie.js'></script>
+    <script>
+
+        
+
+        let btn = document.getElementsByClassName('login-btn')[0];
+        let nameInput = document.getElementsByClassName('username')[0];
+        let passwordInput = document.getElementsByClassName('password')[0];
+
+        btn.onclick = function(){
+            if(nameInput.value&&passwordInput.value){
+                $.ajax({
+                        type:'post',
+                        url:'http://localhost:3000/login',
+                        data:{
+                            name:nameInput.value,
+                            password:passwordInput.value
+                        },
+                        success:(result)=>{
+                            console.log(result);
+                        },
+                        error:()=>{
+
+                        }
+                    })
+            }
+        }
+
+        //在input onblur时，拿值（/对象input），保存到cookie,在刷新页面时(init)，从cookie拿值，显示
+        //在浏览器端有个地方存储东西
+
+        let input1 = document.getElementsByClassName('input1')[0];
+        let input2 = document.getElementsByClassName('input2')[0];
+
+        init();
+
+        //
+        let input = $.cookie('input')?JSON.parse($.cookie('input')) : {};
+
+        input1.onblur = function(){
+            input.input1 = input1.value;
+            console.log(input);
+            $.cookie('input',JSON.stringify(input));//序列化
+
+        }
+        input2.onblur = function(){
+            input.input2 = input2.value;
+            console.log(input);
+            $.cookie('input',JSON.stringify(input));
+
+        }
+        function init(){
+            let data = $.cookie('input') ? JSON.parse($.cookie('input')) : {};//反序列化/返回空值
+            console.log('data==>',data);
+            if(data){
+                input1.value = data.input1 || '';//从cookie中调值，显示在输入框里
+                input2.value = data.input2 || '';
+            }
+        }
+
+    </script>
+
+    
+    
+{% endblock %}
