@@ -1,0 +1,49 @@
+{% extends 'a.njk' %}
+{% block content %}
+
+
+
+    {% block top %}
+        {# <div> 1111</div> #}
+        {# <div>{{test | capitalize}}</div> #}
+        {# <div>{{test | join('==') | capitalize}}</div> #}
+
+        {# {% include 'test.njk' %} #}
+
+        {% if flag %}
+        <div>flag is true</div>
+        {% else %}
+        <div>flag is false</div>
+        {% endif %}
+
+
+
+        {% if gender === 0 %}
+        <div>男</div>
+        {% else %}
+        <div>女</div>
+        {% endif %}
+
+
+
+        {% for item in news %}
+        <div>{{item.name}}</div>
+        <div>{{item.id}}</div>
+        {% endfor %}
+
+
+
+
+
+    {% endblock %}
+
+    {% block left %}
+        {# <div> 2222</div> #}
+    {% endblock %}
+
+    {% block right %}
+        {# <div> 3333</div> #}
+    {% endblock %}
+
+
+{% endblock %}
