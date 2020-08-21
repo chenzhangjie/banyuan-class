@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>瀑布流</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .item{
+            font-size: 30px;
+            font-weight: 700;
+            color: aliceblue;
+            margin-right: 15px;
+            margin-bottom: 15px;
+            width: 205px;
+            /*父类是body=>relative,绝对于视口定位，所有都堆叠在左上角*/
+            /*absolute给每个div加的是left和top*/
+            position: absolute;
+        }
+
+        .item-1{
+            background-color: rgb(206, 169, 169);
+            height: 300px;
+        }
+        .item-2{
+            background-color: rgb(131, 226, 174);
+            height: 150px;
+        }
+        .item-3{
+            background-color: rgb(126, 221, 167);
+            height: 200px;
+        }
+        .item-4{
+            background-color: rgb(133, 134, 228);
+            height: 180px;
+        }
+        .item-5{
+            background-color: rgb(161, 206, 182);
+            height: 350px;
+        }
+        .item-6{
+            background-color: rgb(152, 202, 34);
+            height: 200px;
+        }
+        .item-7{
+            background-color: rgb(23, 154, 194);
+            height: 150px;
+        }
+        .item-8{
+            background-color: rgb(89, 81, 112);
+            height: 360px;
+        }
+        .item-9{
+            background-color: rgb(228, 30, 185);
+            height: 290px;
+        }
+        .item-10{
+            background-color: rgb(21, 236, 14);
+            height: 130px;
+        }
+        .item-11{
+            background-color: rgb(145, 126, 189);
+            height: 150px;
+        }
+        .item-12{
+            background-color: rgb(177, 137, 137);
+            height: 320px;
+        }
+        .item-13{
+            background-color: rgb(166, 157, 192);
+            height: 270px;
+        }
+        .item-14{
+            background-color: rgb(236, 115, 16);
+            height: 260px;
+        }
+        .item-15{
+            background-color: rgb(11, 102, 52);
+            height: 150px;
+        }
+        .item-16{
+            background-color: rgb(71, 150, 107);
+            height: 220px;
+        }
+        .item-17{
+            background-color: rgb(167, 151, 211);
+            height: 370px;
+        }
+        .item-18{
+            background-color: rgb(189, 212, 200);
+            height: 150px;
+        }
+        .item-19{
+            background-color: rgb(150, 106, 136);
+            height: 290px;
+        }
+        .item-20{
+            background-color: rgb(85, 136, 156);
+            height: 150px;
+        }
+        .item-21{
+            background-color: rgb(112, 155, 133);
+            height: 300px;
+        }
+        .item-22{
+            background-color: rgb(221, 153, 179);
+            height: 350px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class = "item item-1">1</div>
+    <div class = "item item-2">2</div>
+    <div class = "item item-3">3</div>
+    <div class = "item item-4">4</div>
+    <div class = "item item-5">5</div>
+    <div class = "item item-6">6</div>
+    <div class = "item item-7">7</div>
+    <div class = "item item-8">8</div>
+    <div class = "item item-9">9</div>
+    <div class = "item item-10">10</div>
+    <div class = "item item-11">11</div>
+    <div class = "item item-12">12</div>
+    <div class = "item item-13">13</div>
+    <div class = "item item-14">14</div>
+    <div class = "item item-15">15</div>
+    <div class = "item item-16">16</div>
+    <div class = "item item-17">17</div>
+    <div class = "item item-18">18</div>
+    <div class = "item item-19">19</div>
+    <div class = "item item-20">20</div>
+    <div class = "item item-21">21</div>
+    <div class = "item item-22">22</div>
+    
+</body>
+<script>
+
+    //拿到所有的items
+    let items = document.getElementsByClassName('item');
+
+    // console.log(items.length);//22
+
+    //定义间隙,作为瀑布流，是定宽，且中间间隙一致，左右上下间隙都是20
+    let gap = 20;
+
+    waterFall();
+
+    function waterFall(){
+
+        //首先确定列数 = 页面的总宽度 / 图片的宽度（一个div加上一个gap的宽度）
+        let pageWidth = window.innerWidth;
+        let itemWidth = items[0].offsetWidth;//一个div的宽度205px
+        let columns = parseInt(pageWidth / (itemWidth + gap));//列数取整
+
+        let arr = [];//定义一个数组，用来存储每一列元素的高度
+
+        //用for循环把items一个个拿出来
+        for(let i = 0; i<items.length; i++){
+            //满足这个条件则说明在第一行
+            if(i < columns){
+
+                items[i].style.top = 0;
+                items[i].style.left = (itemWidth + gap) * i + 'px';//*i代表是第一行的第几个div
+                arr.push(items[i].offsetHeight);
+
+                // console.log(arr);
+            }
+            else{
+
+                //其他行，先找出最小高度列，和索引
+                //找出出现在页面中，最小的高度
+                let minHeight = arr[0];
+                let index = 0;
+                for(let j = 0; j < arr.length; j++){//找出最小高度
+                    if(minHeight > arr[j]){
+                        minHeight = arr[j];
+                        index = j;
+                    }
+                }
+
+                //let minHeight = Math.min(arr)
+                //设置下一行的第一个盒子的位置
+                //top值就是最小列的高度+gap
+                items[i].style.top = arr[index] + gap + 'px';
+                //offsetLeft是div左侧离屏幕左边框的距离
+                items[i].style.left = items[index].offsetLeft + 'px';
+
+                //修改最小列的高度
+                //最小列的高度 = 当前自己的高度 + 拼接过来的高度 + 间隙的高度
+                arr[index] = arr[index] + items[i].offsetHeight + gap;
+            }
+        }
+    }
+
+    //当页面尺寸发生变化时，触发函数，实现响应式
+    window.onresize = function(){
+        waterFall();
+        // console.log('resize')
+    }
+</script>
+</html>
