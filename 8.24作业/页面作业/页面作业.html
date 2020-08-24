@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>页面</title>
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+<style>
+    /* *{
+        padding: 0;
+        margin: 0;
+    } */
+
+    .header{
+        width: 100%;
+        height: 240px;
+        /* background-color: aquamarine; */
+    }
+    .header-title{
+        font-family: 'Fira Sans',sans-serif;
+        font-size: 35px;
+        font-weight: 600;
+        color: rgb(103,105,108);
+        text-align: center;
+        padding-top: 50px;
+    }
+    .header-content{
+        font-size: 20px;
+        color: rgb(103,105,108);
+        font-weight: 300;
+        padding-top: 50px;
+        text-align: center;
+    }
+    .header-yellow{
+        height: 5px;
+        width: 30px;
+        background-color:rgb(206, 181, 39);
+        margin-left: 50%;
+        margin-top: 15px;
+    }
+    /*主体部分，三列布局*/
+    .container-body{
+        width: 1200px;
+        height: 600px;
+        /* background-color: aqua; */
+        /* margin:0 auto; */
+        /* margin-top: 240px; */
+    }
+    /*图片缩放*/
+    .container-img{
+        width: 340px;
+        height: 270px;
+        margin:auto;
+        overflow: hidden;
+    }
+
+    /* 图片 */
+    .child{
+        width: 340px;
+        height: 270px;
+    }
+    .child:hover{
+        transition: all 2s;
+        transform: scale(1.5);
+    }
+    /*图片下方字体*/
+    .container-body-title{
+        font-size: 20px;
+        font-weight: 600;
+        /* margin:0 30px; */
+        /* margin: 0 auto; */
+        margin-top: 10px;
+        color: rgb(103,105,108);
+    }
+
+    /* 图片下方内容 */
+    .container-body-content{
+        font-size: 16px;
+        font-weight: 300;
+        /* margin:0 30px; */
+        margin-top: 10px;
+        color: rgb(103,105,108);
+        /* text-align: left; */
+
+    }
+
+    /* 图片下方read more */
+    .container-body-bottom{
+        font-size: 20px;
+        font-weight: 300;
+        /* margin:0 30px; */
+        margin-top: 20px;
+        color: #949494;
+        /* text-align: left; */
+    }
+    /* .left{
+        width: 400px;
+        height: 600px;
+        background-color:hotpink;
+        float:left;
+
+    }
+    .right{
+        width: 400px;
+        height: 600px;
+        background-color:navy;
+        float:left;
+    }
+    .middle{
+        width: 400px;
+        height: 600px;
+        background-color:khaki;
+        float:left;
+    } */
+    
+    .col-xs-12{
+        /* border: 1px solid black; */
+        width: 340px;
+        float: left;
+        margin-left: 30px;
+    }
+    .row{
+        margin-left: 60px;
+    }
+    
+</style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-title">
+            LASTER FROM OUR BLOG
+        </div>
+        <div class="header-content">
+            Lorem ipsum dolor sit amet,consectetur adipiscing elit,sed do eiusmod</br>
+            tempor incididunt ut labore et dolore magna aliqua.
+        </div>
+        <div class="header-yellow"></div>
+    
+    </div>
+
+
+
+<!-- <div class="container-body"> -->
+
+    <!-- bootstrap : container-->
+    <div class="container-fluid">
+
+        <!-- bootstrap : row -->
+        <div class="row">
+
+            <div class="col-xs-12 col-sm-6 col-md-4" style="height: 600px">
+            
+                <!-- <div class="left"> -->
+                    <div class="container-img">
+                        <img class="child" src="blog01.jpg"alt="图1"><img>
+                        
+                    </div>
+                        <div class="container-body-title">
+                            This Is Lorem Ilpsum Heading
+                        </div>
+                        <div class="container-body-content">
+                        Posted In:legal Advice 
+                        <span class="fa fa-eye" aria-hidden="true"style="float:right"> 11</span>
+                        <span class="fa fa-comments" aria-hidden="true"style="float:right"> 15</span>
+                        
+                        </br>
+                        </br>
+                        We cannot expect people to have respect for laws and order until we teach respect to those we have entrusted to enforce those laws all the time.we always wants to help people cordially.
+                        </div>
+                        <div class="container-body-bottom">
+                            Read more-->
+                        </div>
+                  
+                <!-- </div> -->
+            
+            </div>
+
+
+
+            <div class="col-xs-12 col-sm-6 col-md-4" style="height: 600px">
+            
+                <!-- <div class="middle"> -->
+                    <div class="container-img">
+                        <img class="child" src="blog02.jpg"alt="图1"><img>
+                    </div>
+                    <div class="container-body-title">
+                        This Is Lorem Ilpsum Heading
+                    </div>
+                    <div class="container-body-content">
+                        Posted In:legal Advice 
+                        <span class="fa fa-eye" aria-hidden="true"style="float:right"> 11</span>
+                        <span class="fa fa-comments" aria-hidden="true"style="float:right"> 15</span>
+                    </br>
+                    </br>
+                    We cannot expect people to have respect for laws and order until we teach respect to those we have entrusted to enforce those laws all the time.we always wants to help people cordially.
+                    </div>
+                    <div class="container-body-bottom">
+                        Read more-->
+                    </div>
+                <!-- </div> -->
+            
+            </div>
+
+            
+
+            <div class="col-xs-12 col-sm-6 col-md-4" style="height: 600px">
+            
+                <!-- <div class="right"> -->
+                    <div class="container-img">
+                        <img class="child" src="blog03.jpg"alt="图1"><img>
+                    </div>
+                    <div class="container-body-title">
+                        This Is Lorem Ilpsum Heading
+                    </div>
+                    <div class="container-body-content">
+                        Posted In:legal Advice 
+                        <span class="fa fa-eye" aria-hidden="true"style="float:right"> 11</span>
+                        <span class="fa fa-comments" aria-hidden="true"style="float:right"> 15</span>
+                    </br>
+                    </br>
+                    We cannot expect people to have respect for laws and order until we teach respect to those we have entrusted to enforce those laws all the time.we always wants to help people cordially.
+                    </div>
+                    <div class="container-body-bottom">
+                        Read more-->
+                    </div>
+                <!-- </div> -->
+            
+            </div>
+            
+
+        </div>    
+    </div>
+<!-- </div> -->
+
+    
+</body>
+</html>
