@@ -1,0 +1,131 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    width: 320px;
+    height: 850px;
+    padding: 20px;
+    margin: 0 auto;
+    border: 2px solid black;
+    /* background-color: rgb(223, 155, 223); */
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-container{
+    font-size: 16px;
+    height: 700px;
+    border-bottom: 2px solid rgb(185, 191, 197);
+}
+
+/* 单行菜单 */
+.menu{
+    /* width: 100%; */
+    height: 20px;
+    margin-bottom: 23px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-name{
+    font-size: 18px;
+}
+
+.menu-right{
+    display: flex;
+    align-items: center;
+}
+
+.price{
+    margin-right: 5px;
+    font-size: 16px;
+}
+
+.menu-btn{
+    width: 90px;
+    height: 30px;
+    background-color: black;
+    border-radius: 20px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-btn{
+    background-color: black;
+    color: white;
+    border: none;
+    outline: none;
+}
+
+.right-btn{
+    background-color: black;
+    color: white;
+    border: none;
+    outline: none;
+}
+.number{
+    /* background-color: black;
+    color: white;
+    width: 20px;
+    height: 30px;
+    text-align: center;
+    font-size: 16px; */
+    background-color: black;
+    color: white;
+    border: none;
+    outline: none;
+}
+    
+
+
+/* button{
+    background-color: black;
+    color: white;
+    border: none;
+    outline: none;ss
+    font-size: 16px;
+} */
+
+/* 底部 */
+.bottom-container{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sum-price{
+    font-size: 24px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* margin: 20px 0; */
+}
+/* .sum{
+    font-size: 24px;
+}
+
+.total-price{
+    font-size: 24px;
+} */
+
+.confirm-btn{
+    width: 280px;
+    height: 40px;
+    font-size: 16px;
+    background-color:#0d9e65;
+    color: white;
+    border-radius: 40px;
+    border: none;
+    margin: 0 auto;
+    margin-top: 20px;
+}
