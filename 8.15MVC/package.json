@@ -19,7 +19,7 @@
     "koa-router": "^7.2.1",
     "koa-static": "^3.0.0",
     "koa-views": "^6.0.2",
-    "moment": "^2.27.0",
+    "moment": "^2.29.4",
     "mongoose": "^5.9.29",
     "nunjucks": "~3.0.0"
   },
